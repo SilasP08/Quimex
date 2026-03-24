@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../imagens/fundo-outras-areas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Century Gothic, sans-serif;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.521);
+    height: 100px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+.menu {
+    justify-content: center;
+    flex: 1;
+    display: flex;
+}
+
+.opcao {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    font-size: 17px;
+    transition: font-size 0.3s;
+}
+
+.menu a:hover {
+    text-shadow: 0 0 15px #F7F8F0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: #F7F8F0;
+    transition: 0.3s;
+}
+
+.topo-direita {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.login {
+    padding: 10px 22px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #e6e6e6, #afafaf);
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
+    position: relative;
+    overflow: hidden;
+}
+
+.login:hover {
+    background: #7aceae;
+    box-shadow: 0 0 15px #7aceb5;
+}
+
+.quimex {
+    width: 100px;
+}
+
+.quimex:hover {
+    transform: scale(1.05);
+}
+
+
+.Produtos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1236px;
+    position: relative;
+    transition: width .3s, max-width .3s;
+    width: 85%;
+    height: auto;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.Produtos h1 {
+    margin-top: 20vh;
+    margin-bottom: 50px;
+}
+
+.card-produto {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.548) 5px 5px 20px 0;
+    width: 200px;
+}
+
+.card-produto:hover {
+    transform: scale(1.05);
+}
+
+.img-padrao {
+    width: 170px;
+    height: auto;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    padding: 40px;
+}
