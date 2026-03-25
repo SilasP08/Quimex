@@ -1,17 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;* {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-image: url(../imagens/Fundo_bonito.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Century Gothic, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7f9;
 }
 
 .topo {
@@ -109,88 +104,92 @@ a {
     transform: scale(1.05);
 }
 
-.card-login {
-    margin-top: 30vh;
-    flex-direction: column;
+.produto-container {
     display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.produto-imagem {
+    flex: 1;
+    min-width: 300px;
     text-align: center;
-    justify-content: center;
-    width: 500px;
-    height: auto;
-    max-width: 600px;
-    border: 2px solid #f7f8f0;
-    border-radius: 20px;
-    background-color: #35725bcc;
-    display: flex;
 }
 
-.card-login h3 {
-    margin-top: 20px;
-    padding: 0;
-    font-weight: 600px;
-    color: aliceblue;
-    margin-bottom: 50px;
+.produto-imagem img {
+    width: 100%;
+    max-width: 350px;
 }
 
-.mae {
-    display: flex;
-    justify-content: center;
+.produto-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
 }
 
-.titulo {
-    display: flex;
-    font-size: 40px;
+.produto-info h2 {
+    font-size: 32px;
+    color: #0d3b66;
+    margin-bottom: 15px;
 }
 
-.quimex-card {
-    width: 170px;
+.descricao {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-input {
-    padding: 10px;
-    margin: 5px;
-    width: 450px;
-    border-radius: 20px;
+.caracteristicas {
+    margin-bottom: 20px;
+}
+
+.caracteristicas li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.preco {
+    font-size: 28px;
+    color: #2a9d8f;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-carrinho {
+    background-color: #2a9d8f;
+    color: white;
     border: none;
-}
-
-input:focus {
-    transform: scale(1.05);
-}
-
-input:hover {
-    transform: scale(1.05);
-}
-
-.btn {
-    display: flex;
-    gap: 10px;
-}
-
-.submit-btn {
-    border: none;
-    display: flex;
-    color: #000000;
-    background-color: #c1ffdd;
-    border-radius: 20px;
-    text-decoration: none;
-    width: 200px;
-    justify-content: center;
-    align-items: center;
-    height: 35px;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-.submit-btn:hover {
-    transform: scale(1.05);
+.btn-carrinho:hover {
+    background-color: #21867a;
 }
 
+.descricao-completa {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+
+.descricao-completa h3 {
+    font-size: 24px;
+    color: #0d3b66;
+    margin-bottom: 15px;
+}
+
+.descricao-completa p {
+    margin-bottom: 15px;
+    color: #555;
 }
 
 .footer {

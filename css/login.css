@@ -181,8 +181,59 @@ input:hover {
     height: 35px;
     margin-bottom: 40px;
     margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 1px 4px 5px#000000;
 }
 
 .submit-btn:hover {
     transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 100px;
+    background-color: #0b1f2e;
+    color: white;
+    padding: 50px 20px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-brand h2 {
+    color: #00bfa6;
+    margin-bottom: 10px;
+}
+
+.footer-contact h3,
+.footer-address h3 {
+    margin-bottom: 10px;
+    color: #00bfa6;
+}
+
+.footer-contact p,
+.footer-address p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #1f3a4d;
+    padding-top: 15px;
+    font-size: 14px;
 }
