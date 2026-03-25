@@ -26,9 +26,18 @@ body {
     z-index: 1000;
 }
 
+.menu .opcao {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
 
+.menu li {
+    position: relative;
+}
 
 .menu {
+    display: flex;
     justify-content: center;
     flex: 1;
     display: flex;
@@ -82,45 +91,9 @@ a {
 
 }
 
-.login {
-    padding: 10px 22px;
-    text-decoration: none;
-    background: linear-gradient(45deg, #e6e6e6, #afafaf);
-    color: black;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
-    position: relative;
-    overflow: hidden;
-}
-
-.login:hover {
-    background: #7aceae;
-    box-shadow: 0 0 15px #7aceb5;
-}
-
-.menu .opcao {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.menu .opcao li {
-    position: relative;
-}
-
-.menu .opcao a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-
 .dropdown-menu {
     position: absolute;
-    top: 35px;
+    top: 30px;
     left: 0;
     background-color: #145c44;
     list-style: none;
@@ -147,20 +120,26 @@ a {
     display: block;
 }
 
-.login {
-    background-color: #1f7a5c;
-    padding: 10px 18px;
-    border-radius: 6px;
-    color: white;
+.login-header {
+    padding: 10px 22px;
     text-decoration: none;
+    background: linear-gradient(45deg, #141414ab, #7aceae);
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-header:hover {
+    background: linear-gradient(45deg, #7aceae, #141414ab);
+    box-shadow: 0 0 15px #7aceb5;
 }
 
 .scrolled {
-    background-color: rgba(169, 241, 197, 0.699);
-}
-
-.scrolled a {
-    color: black;
+    background-color: rgb(48, 105, 70);
 }
 
 .imagem-fundo {
@@ -179,7 +158,7 @@ a {
     display: inline-block;
     margin-top: 40vh;
     margin-left: 250px;
-    
+
 }
 
 .quimex {
@@ -203,10 +182,10 @@ a {
 .Produtos h1 {
     margin-bottom: 50px;
     font-size: 40px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
-.grid-produtos {
+.linha-produtos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -266,14 +245,19 @@ a {
 }
 
 .area-contato {
-    flex-direction: column;
-    text-align: center;
     background-image: url(../imagens/fundo-outras-areas2.jpg);
-    height: 100vh;
-    min-height: 100%;
     background-position: center;
     background-size: cover;
-    justify-content: center;
+    padding: 120px 0;
+    text-align: center;
+    height: 1000px;
+}
+
+.contato {
+    margin: auto;
+    max-width: 1300px;
+    width: 90%;
+    text-align: center;
 }
 
 .contato {
@@ -420,4 +404,3 @@ textarea:focus {
     padding-top: 15px;
     font-size: 14px;
 }
-

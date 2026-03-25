@@ -1,3 +1,7 @@
+<?php 
+include 'data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,35 +9,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Quimex</title>
+    <title> <?php echo $nomeloja; ?> </title>
 </head>
 
 <body>
-    <header class="topo">
-        <div class="topo-esquerda">
-            <img class="quimex" src="./imagens/quimex-removebg-preview.png" alt="Logo Quimex">
-        </div>
-    
-        <nav class="menu">
-            <ul class="opcao">
-                <li class="dropdown">
-                    <a href="#">Produtos</a>
-    
-                    <ul class="dropdown-menu">
-                        <li><a href="./Produtos.html">Produtos Gerais</a></li>
-                        <li><a href="produtos-limpeza.html">Produtos de Limpeza</a></li>
-                        <li><a href="produtos-risco.html">Produtos de Risco</a></li>
-                    </ul>
-                </li>
-    
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    
-        <div class="topo-direita">
-            <a href="login.html" class="login">Login</a>
-        </div>
-    </header>
+   
+    <?php 
+    require 'partials/header.php';
+    ?>
 
     <script>
         window.onscroll = function () {
@@ -66,53 +49,65 @@
     <section class="area-produto" id="Produtos">
         <div class="Produtos">
             <h1>Produtos</h1>
-    
-            <div class="grid-produtos">
-    
+
+            <div class="linha-produtos">
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/acetona.webp" alt="">
                     <h3>Acetona P.A. 1 Litro</h3>
                     <p>R$ 59,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/cloro.jpg" alt="">
                     <h3>Hipoclorito de Sódio (Cloro) 5L</h3>
                     <p>R$ 34,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/bicarbonato_de_sodio_.webp" alt="">
                     <h3>Bicarbonato de Sódio 1kg</h3>
                     <p>R$ 15,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/sodacaustica.webp" alt="">
                     <h3>Soda Cáustica Escamas 99% 1kg</h3>
                     <p>R$ 19,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/hidroxo_de_potassio.webp" alt="">
                     <h3>Hidróxido de Potássio 1kg</h3>
                     <p>R$ 42,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
                 <div class="card-produto">
                     <img class="img-padrao" src="./imagens/alcool_etilico.webp" alt="">
                     <h3>Álcool Etílico 92,8% 1L</h3>
                     <p>R$ 12,90</p>
-                    <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                 </div>
-    
+
+                <div class="card-produto">
+                    <img class="img-padrao" src="./imagens/base_detergente.webp" alt="">
+                    <h3>Base para detergente 5L</h3>
+                    <p>R$ 27,90</p>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+                </div>
+                <div class="card-produto">
+                    <img class="img-padrao" src="./imagens/sabonete_liquido.webp" alt="">
+                    <h3>Sabonete líquido 5L</h3>
+                    <p>R$ 34,90</p>
+                    <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+                </div>
+
             </div>
-        </div>
     </section>
 
 
@@ -147,35 +142,35 @@
         </div>
 
     </section>
-   
+
     <footer class="footer">
         <div class="footer-container">
-    
-           
+
+
             <div class="footer-brand">
                 <img src="./imagens/quimex-removebg-preview.png" alt="Logo Quimex" class="footer-logo">
                 <h2>QUIMEX</h2>
                 <p>Soluções em produtos químicos com qualidade e segurança.</p>
             </div>
-    
-           
+
+
             <div class="footer-contact">
                 <h3>Contato</h3>
                 <p>Email: contato@quimex.com</p>
                 <p>Telefone: (11) 99999-9999</p>
             </div>
-    
-           
+
+
             <div class="footer-address">
                 <h3>Endereço</h3>
                 <p>Rua das Indústrias, 245</p>
                 <p>Centro Empresarial</p>
                 <p>São Paulo - SP, 09000-000</p>
             </div>
-    
+
         </div>
-    
-        
+
+
         <div class="footer-bottom">
             <p>© 2026 Quimex - Todos os direitos reservados</p>
         </div>

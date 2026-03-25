@@ -1,30 +1,21 @@
+<?php
+include 'data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos - Quimex</title>
+    <title>Produtos - <?php echo $nomeloja?></title>
     <link rel="stylesheet" href="./css/produtos.css">
 </head>
 
 <body>
-    <header class="topo">
-        <div class="topo-esquerda">
-            <a href="./index.html"><img class="quimex" class="quimex" src="./imagens/quimex-removebg-preview.png"
-                    alt=""></a>
-        </div>
-        <nav class="menu">
-            <ul class="opcao">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./Produtos.html">Produtos</a></li>
-                <li><a href="./index.html#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="topo-direita">
-            <a href="login.html" class="login">Login</a>
-        </div>
-    </header>
+   <?php 
+    require 'partials/header.php';
+    ?>
 
     <div class="Produtos">
         <h1>Produtos</h1>
@@ -34,19 +25,19 @@
                 <img class="img-padrao" src="./imagens/acetona.webp" alt="">
                 <h3>Acetona P.A. 1 Litro</h3>
                 <p>R$ 59,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/cloro.jpg" alt="">
                 <h3>Hipoclorito de Sódio (Cloro) 5L</h3>
                 <p>R$ 34,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/bicarbonato_de_sodio_.webp" alt="">
                 <h3>Bicarbonato de Sódio 1kg</h3>
                 <p>R$ 15,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
 
 
@@ -56,19 +47,19 @@
                 <img class="img-padrao" src="./imagens/sodacaustica.webp" alt="">
                 <h3>Soda Cáustica Escamas 99% 1kg</h3>
                 <p>R$ 19,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/hidroxo_de_potassio.webp" alt="">
                 <h3>Hidróxido de Potássio 1kg</h3>
                 <p>R$ 42,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/alcool_etilico.webp" alt="">
                 <h3>Álcool etílico 92,8% 1L</h3>
                 <p>R$ 12,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
         </div>
         <div class="linha">
@@ -76,19 +67,25 @@
                 <img src="./imagens/essencia-concentrada.jpg" class="img-padrao" alt="">
                 <h3>Essêcia Concetrada</h3>
                 <p>R$ 9,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/base_detergente.webp" alt="">
                 <h3>Base para detergente 5L</h3>
                 <p>R$ 27,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/sabonete_liquido.webp" alt="">
                 <h3>Sabonete líquido 5L</h3>
                 <p>R$ 34,90</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+            </div>
+            <div class="card-produto">
+                <img src="" class="img-padrao" alt="">
+                <h3></h3>
+                <p></p>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
         </div>
         <div class="linha">
@@ -96,22 +93,30 @@
                 <img class="img-padrao" src="./imagens/acido_peracetico.webp" alt="">
                 <h3>ácido peracético 5L</h3>
                 <p>R$ 139,65</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/PAC.webp" alt="">
                 <h3>PAC 200 Sanitizante</h3>
                 <p>R$ 60,00</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
                 <img class="img-padrao" src="./imagens/recarga_extintor.webp" alt="">
                 <h3>Pó Quimico para Recarga de Extintor <br> Tipo ABC 55% - 25KG</h3>
                 <p>R$ 389,00</p>
-                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+            </div>
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/solucao_redutora.webp" alt="">
+                <h3>Solução Redutora de Estanho <br> 10%</h3>
+                <p>R$ 867,00</p>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
         </div>
     </div>
+
+
     <footer class="footer">
         <div class="footer-container">
 

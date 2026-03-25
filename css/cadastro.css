@@ -27,9 +27,18 @@ body {
     z-index: 1000;
 }
 
+.menu .opcao {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
 
+.menu li {
+    position: relative;
+}
 
 .menu {
+    display: flex;
     justify-content: center;
     flex: 1;
     display: flex;
@@ -83,12 +92,41 @@ a {
 
 }
 
-.login {
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #145c44;
+    list-style: none;
+    padding: 10px 0;
+    width: 200px;
+    border-radius: 8px;
+    display: none;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #1f7a5c;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.login-header {
     padding: 10px 22px;
     text-decoration: none;
-    background: linear-gradient(45deg, #e6e6e6, #afafaf);
+    background: linear-gradient(45deg, #141414ab, #7aceae);
     color: black;
-    border-radius: 30px;
+    border-radius: 20px;
     font-weight: bold;
     font-size: 16px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
@@ -96,8 +134,8 @@ a {
     overflow: hidden;
 }
 
-.login:hover {
-    background: #7aceae;
+.login-header:hover {
+    background: linear-gradient(45deg, #7aceae, #141414ab);
     box-shadow: 0 0 15px #7aceb5;
 }
 
@@ -107,6 +145,10 @@ a {
 
 .quimex:hover {
     transform: scale(1.05);
+}
+
+section {
+    height: 1000px;
 }
 
 .card-login {
