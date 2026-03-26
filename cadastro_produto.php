@@ -24,53 +24,52 @@ include 'data.php';
             <div class="form-card">
                 <h2>Cadastrar Novo Produto</h2>
 
-                <form>
+                <form action="./novo_produto.php" method="POST">
                     <div class="form-group">
                         <label>Nome do Produto</label>
-                        <input type="text" placeholder="Digite o nome do produto">
+                        <input type="text" placeholder="Digite o nome do produto" name="nome">
                     </div>
 
                     <div class="row">
                         <div class="form-group">
                             <label>Categoria</label>
-                            <select>
-                                <option>Selecione</option>
-                                <option>Produtos Gerais</option>
-                                <option>Produtos de Limpeza</option>
-                                <option>Produtos Químicos</option>
-                                <option>Produtos de Risco</option>
+                            <select name="nivel">
+                                <option value="">Selecione</option value="">
+                                <option value="Limpeza">Produtos de Limpeza</option>
+                                <option value="Químicos">Produtos Químicos</option>
+                                <option value="Risco">Produtos de Risco</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Preço (R$)</label>
-                            <input type="number" placeholder="0.00">
+                            <input type="number" placeholder="0.00" name="preco">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group">
                             <label>Quantidade em Estoque</label>
-                            <input type="number" placeholder="0">
+                            <input type="number" placeholder="0" name="quantidade">
                         </div>
 
                         <div class="form-group">
                             <label>Código do Produto</label>
-                            <input type="text" placeholder="Ex: QMX-001">
+                            <input type="text" placeholder="Ex: QMX-001" name="id_produto">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Imagem do Produto</label>
-                        <input type="file">
+                        <input type="file" name="imagem"  accept="image/*">
                     </div>
 
                     <div class="form-group">
                         <label>Descrição do Produto</label>
-                        <textarea placeholder="Digite uma descrição detalhada do produto..."></textarea>
+                        <textarea name="desc" placeholder="Digite uma descrição detalhada do produto..."></textarea>
                     </div>
 
-                    <button class="btn">Cadastrar Produto</button>
+                    <button class="btn" >Cadastrar Produto</button>
                 </form>
             </div>
 
