@@ -39,7 +39,12 @@ include 'data.php';
                 <p>R$ 15,90</p>
                 <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
-
+            <div class="card-produto">
+                <img src="./imagens/poli.webp" class="img-padrao" alt="">
+                <h3>Polimetilenoureia N28 Allchem 50 Litros</h3>
+                <p>R$ 756,75</p>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+            </div>
 
         </div>
         <div class="linha">
@@ -59,6 +64,12 @@ include 'data.php';
                 <img class="img-padrao" src="./imagens/alcool_etilico.webp" alt="">
                 <h3>Álcool etílico 92,8% 1L</h3>
                 <p>R$ 12,90</p>
+                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+            </div>
+            <div class="card-produto">
+                <img src="./imagens/vonixx.webp" class="img-padrao" alt="">
+                <h3>IMPACT 5L Vonixx</h3>
+                <p>R$ 67,80</p>
                 <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
         </div>
@@ -82,9 +93,9 @@ include 'data.php';
                 <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
             <div class="card-produto">
-                <img src="" class="img-padrao" alt="">
-                <h3></h3>
-                <p></p>
+                <img src="./imagens/veja.webp" class="img-padrao" alt="">
+                <h3>veja</h3>
+                <p>R$ 9,99</p>
                 <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
             </div>
         </div>
