@@ -9,11 +9,13 @@ include 'data.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title> <?php echo $nomeloja; ?> </title>
+    <title>
+        <?php echo $nomeloja; ?>
+    </title>
 </head>
 
 <body>
-   
+
     <?php 
     require 'partials/header.php';
     ?>
@@ -49,6 +51,15 @@ include 'data.php';
     <section class="area-produto" id="Produtos">
         <div class="Produtos">
             <h1>Produtos</h1>
+
+            <div class="cat-produtos">
+                <ul>
+                    <li><a href="">Gerais</a></li>
+                    <li><a href="">Risco</a></li>
+                    <li><a href="">Limpeza</a></li>
+                </ul>
+            </div>
+
 
             <div class="linha-produtos">
 

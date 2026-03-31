@@ -185,6 +185,19 @@ a {
     color: rgb(0, 0, 0);
 }
 
+.cat-produtos {
+    display: flex;
+    text-decoration: none; 
+    text-decoration: black;
+    list-style: none;
+}
+
+.cat-produtos a{
+    list-style: none;
+    text-decoration: none; 
+    text-decoration: black;
+}
+
 .linha-produtos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

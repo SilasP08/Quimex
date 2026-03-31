@@ -1,5 +1,7 @@
 <?php
 include 'data.php';
+// print "<pre>";
+// print_r($produtos_gerais);
 ?>
 
 <!DOCTYPE html>
@@ -19,114 +21,36 @@ include 'data.php';
 
     <div class="Produtos">
         <h1>Produtos</h1>
-
-        <div class="linha">
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/acetona.webp" alt="">
-                <h3>Acetona P.A. 1 Litro</h3>
-                <p>R$ 59,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/cloro.jpg" alt="">
-                <h3>Hipoclorito de Sódio (Cloro) 5L</h3>
-                <p>R$ 34,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/bicarbonato_de_sodio_.webp" alt="">
-                <h3>Bicarbonato de Sódio 1kg</h3>
-                <p>R$ 15,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img src="./imagens/poli.webp" class="img-padrao" alt="">
-                <h3>Polimetilenoureia N28 Allchem 50 Litros</h3>
-                <p>R$ 756,75</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+        
+            <div class="cat-produtos">
+                
+                <ul>
+                    <?php
+                        foreach($categorias as $kat =>$nome){
+                            print '
+                            <li><a href="#cat-'.$kat.'">'.$nome.'</a></li>
+                            ';
+                        };
+                    ?>
+                </ul>
             </div>
 
-        </div>
         <div class="linha">
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/sodacaustica.webp" alt="">
-                <h3>Soda Cáustica Escamas 99% 1kg</h3>
-                <p>R$ 19,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/hidroxo_de_potassio.webp" alt="">
-                <h3>Hidróxido de Potássio 1kg</h3>
-                <p>R$ 42,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/alcool_etilico.webp" alt="">
-                <h3>Álcool etílico 92,8% 1L</h3>
-                <p>R$ 12,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img src="./imagens/vonixx.webp" class="img-padrao" alt="">
-                <h3>IMPACT 5L Vonixx</h3>
-                <p>R$ 67,80</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="card-produto">
-                <img src="./imagens/essencia-concentrada.jpg" class="img-padrao" alt="">
-                <h3>Essêcia Concetrada</h3>
-                <p>R$ 9,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/base_detergente.webp" alt="">
-                <h3>Base para detergente 5L</h3>
-                <p>R$ 27,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/sabonete_liquido.webp" alt="">
-                <h3>Sabonete líquido 5L</h3>
-                <p>R$ 34,90</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img src="./imagens/veja.webp" class="img-padrao" alt="">
-                <h3>veja</h3>
-                <p>R$ 9,99</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/acido_peracetico.webp" alt="">
-                <h3>ácido peracético 5L</h3>
-                <p>R$ 139,65</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/PAC.webp" alt="">
-                <h3>PAC 200 Sanitizante</h3>
-                <p>R$ 60,00</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/recarga_extintor.webp" alt="">
-                <h3>Pó Quimico para Recarga de Extintor <br> Tipo ABC 55% - 25KG</h3>
-                <p>R$ 389,00</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-            <div class="card-produto">
-                <img class="img-padrao" src="./imagens/solucao_redutora.webp" alt="">
-                <h3>Solução Redutora de Estanho <br> 10%</h3>
-                <p>R$ 867,00</p>
-                <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
-            </div>
-        </div>
+            <?php
+                foreach($produtos_gerais as $produto) {
+                    print '
+                        <div class="card-produto">
+                            <img class="img-padrao" src="'.$produto['imagem'].'" alt="">
+                            <h3>'.$produto['nome'].'</h3>
+                            <p>R$ ' . $produto['preco'].'</p>
+                            <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
+                        </div>
+                    ';
+                };
+            ?>
+        </div>    
+           
     </div>
-
 
     <footer class="footer">
         <div class="footer-container">
