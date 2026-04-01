@@ -3,7 +3,7 @@
 $nomeloja = "Quimex";
 
 $categorias = [
-    'geral'=> 'Geral',
+    'geral'=> 'Todos',
     'risco'=> 'Risco',
     'limpeza'=> 'Limpeza',
     'belaza'=> 'Beleza'

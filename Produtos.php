@@ -1,7 +1,7 @@
 <?php
-include 'data.php';
+require_once 'init.php';
 // print "<pre>";
-// print_r($produtos_gerais);
+// print_r($_SESSION['produtos']);
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +15,11 @@ include 'data.php';
 </head>
 
 <body>
-   <?php 
-    require 'partials/header.php';
+    <?php 
+        require_once 'partials/header.php';
+        if (isset($_GET['produtoadd']) && $_GET['produtodoadd'] === '1') {
+            print '<p class="aviso"> Produto Adicionado com Sucesso!! </p>';
+        };
     ?>
 
     <div class="Produtos">
@@ -37,7 +40,7 @@ include 'data.php';
 
         <div class="linha">
             <?php
-                foreach($produtos_gerais as $produto) {
+                foreach($_SESSION['produtos'] as $produto) {
                     print '
                         <div class="card-produto">
                             <img class="img-padrao" src="'.$produto['imagem'].'" alt="">
@@ -52,38 +55,9 @@ include 'data.php';
            
     </div>
 
-    <footer class="footer">
-        <div class="footer-container">
-
-
-            <div class="footer-brand">
-                <img src="./imagens/quimex-removebg-preview.png" alt="Logo Quimex" class="footer-logo">
-                <h2>QUIMEX</h2>
-                <p>Soluções em produtos químicos com qualidade e segurança.</p>
-            </div>
-
-
-            <div class="footer-contact">
-                <h3>Contato</h3>
-                <p>Email: contato@quimex.com</p>
-                <p>Telefone: (11) 99999-9999</p>
-            </div>
-
-
-            <div class="footer-address">
-                <h3>Endereço</h3>
-                <p>Rua das Indústrias, 245</p>
-                <p>Centro Empresarial</p>
-                <p>São Paulo - SP, 09000-000</p>
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-            <p>© 2026 Quimex - Todos os direitos reservados</p>
-        </div>
-    </footer>
+    <?php
+        require_once 'partials/footer.php';
+    ?>
 </body>
 
 </html>

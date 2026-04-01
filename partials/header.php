@@ -10,7 +10,7 @@
                     <a href="index.php#Produtos">Produtos</a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="./Produtos.php">Produtos Gerais</a></li>
+                        <li><a href="./Produtos.php">Todos Produtos</a></li>
                         <li><a href="produtos-limpeza.php">Produtos de Limpeza</a></li>
                         <li><a href="produtos-risco.php">Produtos de Risco</a></li>
                     </ul>

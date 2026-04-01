@@ -1,5 +1,22 @@
 <?php
-include 'data.php';
+require_once 'init.php';
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $ids = array_column($_SESSION['produtos'], 'id');
+    $novoId = $ids ? max($ids) + 1 :  1 ;
+    $_SESSION['produtos'][] = [
+        'id'=> $novoId,
+        'nome'=> $_POST['nome'],
+        'preco'=> $_POST['preco'],
+        'categoria'=> $_POST['categoria'],
+        'imagem'=> $_POST['imagem']
+    ];
+    header('location: Produtos.php?produtoadd=1');
+    exit;
+};
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -15,7 +32,7 @@ include 'data.php';
 <body>
 
     <?php 
-    require 'partials/header.php';
+    require_once 'partials/header.php';
     ?>
 
     <section>
@@ -24,7 +41,7 @@ include 'data.php';
             <div class="form-card">
                 <h2>Cadastrar Novo Produto</h2>
 
-                <form action="./novo_produto.php" method="POST">
+                <form action="cadastro_produto.php" method="POST">
                     <div class="form-group">
                         <label>Nome do Produto</label>
                         <input type="text" placeholder="Digite o nome do produto" name="nome">
@@ -33,17 +50,18 @@ include 'data.php';
                     <div class="row">
                         <div class="form-group">
                             <label>Categoria</label>
-                            <select name="nivel">
+                            <select name="categoria">
                                 <option value="">Selecione</option value="">
                                 <option value="Limpeza">Produtos de Limpeza</option>
                                 <option value="Químicos">Produtos Químicos</option>
                                 <option value="Risco">Produtos de Risco</option>
+                                <option value="Beleza">Produtos de Beleza</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Preço (R$)</label>
-                            <input type="number" placeholder="0.00" name="preco">
+                            <input type="number" step="0.01" min="0" placeholder="0.00" name="preco">
                         </div>
                     </div>
 
@@ -53,15 +71,11 @@ include 'data.php';
                             <input type="number" placeholder="0" name="quantidade">
                         </div>
 
-                        <div class="form-group">
-                            <label>Código do Produto</label>
-                            <input type="text" placeholder="Ex: QMX-001" name="id_produto">
-                        </div>
                     </div>
 
                     <div class="form-group">
                         <label>Imagem do Produto</label>
-                        <input type="file" name="imagem"  accept="image/*">
+                        <input type="text" placeholder="Coloque o caminho da imagem ou URL" name="imagem"  accept="image/*">
                     </div>
 
                     <div class="form-group">
@@ -77,38 +91,9 @@ include 'data.php';
     </section>
 
 
-    <footer class="footer">
-        <div class="footer-container">
-
-
-            <div class="footer-brand">
-                <img src="./imagens/quimex-removebg-preview.png" alt="Logo Quimex" class="footer-logo">
-                <h2>QUIMEX</h2>
-                <p>Soluções em produtos químicos com qualidade e segurança.</p>
-            </div>
-
-
-            <div class="footer-contact">
-                <h3>Contato</h3>
-                <p>Email: contato@quimex.com</p>
-                <p>Telefone: (11) 99999-9999</p>
-            </div>
-
-
-            <div class="footer-address">
-                <h3>Endereço</h3>
-                <p>Rua das Indústrias, 245</p>
-                <p>Centro Empresarial</p>
-                <p>São Paulo - SP, 09000-000</p>
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-            <p>© 2026 Quimex - Todos os direitos reservados</p>
-        </div>
-    </footer>
+    <?php
+        require_once 'partials/footer.php';
+    ?>
 
 </body>
 
