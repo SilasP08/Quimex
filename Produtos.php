@@ -1,7 +1,11 @@
 <?php
 require_once 'init.php';
+
+// print_r($_GET['categoria']);
 // print "<pre>";
 // print_r($_SESSION['produtos']);
+
+$categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +32,12 @@ require_once 'init.php';
             <div class="cat-produtos">
                 
                 <ul>
+                            <li><a href="produtos.php">Todos</a></li>
+
                     <?php
                         foreach($categorias as $kat =>$nome){
                             print '
-                            <li><a href="#cat-'.$kat.'">'.$nome.'</a></li>
+                            <li><a href="produtos.php?categoria='.$kat.'">'.$nome.'</a></li>
                             ';
                         };
                     ?>
@@ -41,15 +47,21 @@ require_once 'init.php';
         <div class="linha">
             <?php
                 foreach($_SESSION['produtos'] as $produto) {
-                    print '
+                    if($categoria_get === '' || $produto['categoria']===$categoria_get) {
+                         print '
                         <div class="card-produto">
                             <img class="img-padrao" src="'.$produto['imagem'].'" alt="">
                             <h3>'.$produto['nome'].'</h3>
                             <p>R$ ' . $produto['preco'].'</p>
                             <a href="bicarbonato.php" class="btn-card">COMPRAR</a>
                         </div>
-                    ';
+                            ';
+                        // print_r($produto);
+                    }
+                   
+                        
                 };
+                   
             ?>
         </div>    
            

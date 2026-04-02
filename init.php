@@ -7,3 +7,5 @@ require_once 'data.php';
 if (!isset($_SESSION['produtos'])) {
     $_SESSION['produtos'] = $produtos_gerais;
 };
+
+// session_destroy();

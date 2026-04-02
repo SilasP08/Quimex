@@ -17,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 };
 
+// print_r($_SESSION)
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <select name="categoria">
                                 <option value="">Selecione</option value="">
                                 <option value="Limpeza">Produtos de Limpeza</option>
-                                <option value="Químicos">Produtos Químicos</option>
                                 <option value="Risco">Produtos de Risco</option>
                                 <option value="Beleza">Produtos de Beleza</option>
                             </select>

@@ -3,10 +3,9 @@
 $nomeloja = "Quimex";
 
 $categorias = [
-    'geral'=> 'Todos',
-    'risco'=> 'Risco',
-    'limpeza'=> 'Limpeza',
-    'belaza'=> 'Beleza'
+    'Risco'=> 'Risco',
+    'Limpeza'=> 'Limpeza',
+    'Beleza'=> 'Beleza'
 ];
 
 $produtos_gerais = [
@@ -14,7 +13,7 @@ $produtos_gerais = [
         'id'=>1,
         'nome'=> 'Acetona P.A. 1 Litro',
         'preco'=> 59.90,
-        'categoria'=> 'beleza',
+        'categoria'=> 'Beleza',
         'imagem'=> './imagens/acetona.webp'
     ],
     [
@@ -28,7 +27,7 @@ $produtos_gerais = [
         'id'=>3,
         'nome'=> 'Bicarbonato de Sódio 1kg',
         'preco'=> 15.90,
-        'categoria'=> 'limpeza',
+        'categoria'=> 'Limpeza',
         'imagem'=> './imagens/bicarbonato_de_sodio_.webp'
     ],
     [
@@ -49,7 +48,7 @@ $produtos_gerais = [
        'id'=>6,
         'nome'=> 'Hidróxido de Potássio 1kg',
         'preco'=> 42.90,
-        'categoria'=> 'limpeza',
+        'categoria'=> 'Limpeza',
         'imagem'=> './imagens/hidroxo_de_potassio.webp' 
     ],
     [
@@ -57,18 +56,18 @@ $produtos_gerais = [
         'id'=>7,
         'nome'=> 'Álcool Etílico 92,8% 1L',
         'preco'=> 12.90,
-        'categoria'=> 'limpeza',
+        'categoria'=> 'Limpeza',
         'imagem'=> './imagens/alcool_etilico.webp'
     ],
     [
         'id'=>8,
         'nome'=> 'IMPACT 5L Vonixx',
         'preco'=> 67.80,
-        'categoria'=> 'limpeza',
+        'categoria'=> 'Limpeza',
         'imagem'=> './imagens/vonixx.webp'
     ],
     [
-        'id'=>8,
+        'id'=>9,
         'nome'=> 'Essêcia Concetrada',
         'preco'=> 9.90,
         'categoria'=> 'Beleza',
