@@ -17,7 +17,7 @@ require_once 'init.php';
 <body>
     <?php 
         require_once 'partials/header.php';
-        if (isset($_GET['produtoadd']) && $_GET['produtodoadd'] === '1') {
+        if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1') {
             print '<p class="aviso"> Produto Adicionado com Sucesso!! </p>';
         };
     ?>
