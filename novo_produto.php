@@ -1,5 +1,21 @@
 <?php
-require_once './php/cadastrar_produto.php';
+require_once 'init.php';
+
+$id = intval($_GET['id'] ?? 0);
+
+$produtoEncontrado = null;
+
+foreach($_SESSION['produtos'] as $produto) {
+    if ($produto['id'] == $id) {
+        $produtoEncontrado = $produto;
+        break;
+    }
+}
+
+if (!$produtoEncontrado) {
+    echo "Produto não encontrado!";
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +23,7 @@ require_once './php/cadastrar_produto.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Produto</title>
+    <title>Produto - <?php echo $produto['nome'];  ?></title>
     <link rel="stylesheet" href="./css/bicarbonato.css">
 </head>
 <body>
@@ -19,49 +35,34 @@ require_once './php/cadastrar_produto.php';
     <section class="section-pdr">
         <div class="produto-container">
             <div class="produto-imagem">
-                <img src="./imagens/bicarbonato_de_sodio_.webp" alt="Bicarbonato de Sódio">
+                <img src="<?php echo $produto['imagem']; ?>" alt="">
             </div>
 
             <div class="produto-info">
 
-                <h2><?php echo $nome_produto; ?></h2>
+                <h2><?php echo $produto['nome']; ?></h2>
 
                 <p class="descricao">
-                    <?php echo $desc; ?>
+                    <?php echo $produto['desc']; ?>
                 </p>
 
-                <ul class="caracteristicas">
-                    <li>Alta pureza</li>
-                    <li>Uso industrial e doméstico</li>
-                    <li>Produto seguro e versátil</li>
-                    <li>Embalagem resistente</li>
-                    <li>Quantidade: 1Kg</li>
-                </ul>
-
+               <ul class="caracteristicas">
+                    <li><?php echo $produto['categoria']; ?></li>
+               </ul>
+                
                 <div class="preco">
-                   <?php $preco; ?> 
+                   <?php echo  'R$'.$produto['preco']. ''; ?> 
                 </div>
+                
 
+                <p class="estoque">
+                    <?php echo 'Quantidade em estoque '.$produto['qtd']. ''; ?>
+                </p>
                 <button class="btn-carrinho">Adicionar ao Carrinho</button>
-
+                
             </div>
         </div>
 
-
-    </section>
-
-    <section class="descricao-completa">
-
-        <h3>Descrição do Produto</h3>
-
-        <p>
-           <?php  echo $desc; ?>
-        </p>
-
-        <p>
-            Sua formulação garante eficiência e segurança, sendo ideal para empresas
-            que buscam um produto confiável com excelente desempenho.
-        </p>
 
     </section>
 

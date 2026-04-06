@@ -11,7 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'nome'=> $_POST['nome'],
         'preco'=> $_POST['preco'],
         'categoria'=> $_POST['categoria'],
-        'imagem'=> $_POST['imagem']
+        'imagem'=> $_POST['imagem'],
+        'desc'=> $_POST['desc'],
+        'qtd'=> $_POST['qtd']
     ];
     header('location: Produtos.php?produtoadd=1');
     exit;
@@ -69,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="row">
                         <div class="form-group">
                             <label>Quantidade em Estoque</label>
-                            <input type="number" placeholder="0" name="quantidade">
+                            <input type="number" placeholder="0" name="qtd">
                         </div>
 
                     </div>

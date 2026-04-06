@@ -191,10 +191,14 @@ a {
 }
 
 .caracteristicas {
-    margin-bottom: 20px;
+    margin-top: 35px;
+    padding-left: 50px;
+    list-style: none;
+    margin-bottom: 35px;
 }
 
 .caracteristicas li {
+    list-style: none;
     margin-bottom: 8px;
     color: #333;
 }
@@ -204,6 +208,11 @@ a {
     color: #2a9d8f;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.estoque {
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .btn-carrinho {
