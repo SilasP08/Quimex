@@ -3,6 +3,11 @@ require_once 'init.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (empty($_POST['nome']) || empty($_POST['preco']) || empty($_POST['categoria'])) {
+    die('Preencha todos os campos obrigatórios!');
+    }
+    $nome = htmlspecialchars($nome);
+    $desc = htmlspecialchars($desc);
 
     $ids = array_column($_SESSION['produtos'], 'id');
     $novoId = $ids ? max($ids) + 1 :  1 ;
@@ -18,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('location: Produtos.php?produtoadd=1');
     exit;
 };
+
 
 // print_r($_SESSION)
 

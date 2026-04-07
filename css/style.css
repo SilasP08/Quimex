@@ -172,6 +172,48 @@ a {
     padding: 120px 0;
 }
 
+.cat-produtos {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.cat-produtos a{
+    justify-content: center;
+    padding: 10px 22px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #141414ab, #7aceae);
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.cat-produtos ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.cat-produtos li{
+    list-style: none;
+    text-decoration: none; 
+    color: black;
+    display: flex;
+}
+
+.cat-produtos a:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #7aceae, #141414ab);
+    box-shadow: 0 0 15px #7aceb5;
+}
+
+
 .Produtos {
     margin: auto;
     max-width: 1300px;

@@ -32,7 +32,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
             <div class="cat-produtos">
                 
                 <ul>
-                            <li><a href="produtos.php">Todos</a></li>
+                    <li><a href="produtos.php">Todos</a></li>
 
                     <?php
                         foreach($categorias as $kat =>$nome){
@@ -53,7 +53,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                             <img class="img-padrao" src="'.$produto['imagem'].'" alt="">
                             <h3>'.$produto['nome'].'</h3>
                             <p>R$ ' . $produto['preco'].'</p>
-                            <a href=novo_produto.php?id='.$produto['id'].'" class="btn-card">COMPRAR</a>
+                            <a href="novo_produto.php?id='.$produto['id'].'" class="btn-card">COMPRAR</a>
                         </div>
                             ';
                         // print_r($produto);

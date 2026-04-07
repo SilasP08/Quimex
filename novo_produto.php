@@ -1,7 +1,20 @@
 <?php
 require_once 'init.php';
 
+// $id = isset($_GET['$id']) ? (int)$_GET['id'] : 0;
+// $ids = array_column($_SESSION['produtos'], 'id');
+// $index = array_search($id, $ids);
+// $produto = $_SESSION['produtos'][$index];
+// print_r($produto); 
+// if ($idex !== false) {
+// $produto = $_SESSION['produto'][$index];
+// } else {
+//      echo 'Produto não existe!!!';
+// }
+
 $id = intval($_GET['id'] ?? 0);
+
+// print_r(intval($_GET['id']) ?? 0);
 
 $produtoEncontrado = null;
 
@@ -13,7 +26,7 @@ foreach($_SESSION['produtos'] as $produto) {
 }
 
 if (!$produtoEncontrado) {
-    echo "Produto não encontrado!";
+    header('Location: 404.php');
     exit;
 }
 ?>
