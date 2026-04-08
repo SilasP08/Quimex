@@ -54,41 +54,64 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
     <section class="area-produto" id="Produtos">
        <div class="Produtos">
         <h1>Produtos</h1>
-        
-            <div class="cat-produtos">
-                
-                <ul>
-                    <li><a href="produtos.php">Todos</a></li>
-
-                    <?php
-                        foreach($categorias as $kat =>$nome){
-                            print '
-                            <li><a href="index.php?categoria='.$kat.'#Produtos">'.$nome.'</a></li>
-                            ';
-                        };
-                    ?>
-                </ul>
-            </div>
 
         <div class="linha-produtos">
-            <?php
-                foreach($_SESSION['produtos'] as $produto) {
-                    if($categoria_get === '' || $produto['categoria']===$categoria_get) {
-                         print '
-                        <div class="card-produto">
-                            <img class="img-padrao" src="'.$produto['imagem'].'" alt="">
-                            <h3>'.$produto['nome'].'</h3>
-                            <p>R$ ' . $produto['preco'].'</p>
-                            <a href="novo_produto.php?id='.$produto['id'].'" class="btn-card">COMPRAR</a>
-                        </div>
-                            ';
-                        // print_r($produto);
-                    }
-                   
-                        
-                };
-                   
-            ?>
+             <div class="card-produto">
+                <img class="img-padrao" src="./imagens/acetona.webp" alt="">
+                <h3>Acetona P.A. 1 Litro</h3>
+                <p>R$ 59,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/cloro.jpg" alt="">
+                <h3>Hipoclorito de Sódio (Cloro) 5L</h3>
+                <p>R$ 34,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/bicarbonato_de_sodio_.webp" alt="">
+                <h3>Bicarbonato de Sódio 1kg</h3>
+                <p>R$ 15,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/sodacaustica.webp" alt="">
+                <h3>Soda Cáustica Escamas 99% 1kg</h3>
+                <p>R$ 19,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/hidroxo_de_potassio.webp" alt="">
+                <h3>Hidróxido de Potássio 1kg</h3>
+                <p>R$ 42,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/alcool_etilico.webp" alt="">
+                <h3>Álcool Etílico 92,8% 1L</h3>
+                <p>R$ 12,90</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/poli.webp" alt="">
+                <h3>Polimetilenoureia N28 Allchem 50 Litros</h3>
+                <p>R$ 756.75</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
+            <div class="card-produto">
+                <img class="img-padrao" src="./imagens/vonixx.webp" alt="">
+                <h3>IMPACT 5L Vonixx</h3>
+                <p>R$ 67.80</p>
+                <a href="bicarbonato.html" class="btn-card">COMPRAR</a>
+            </div>
+
         </div>    
            
     </div>

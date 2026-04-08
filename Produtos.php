@@ -57,9 +57,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                         </div>
                             ';
                         // print_r($produto);
-                    }
-                   
-                        
+                    }  
                 };
                    
             ?>
